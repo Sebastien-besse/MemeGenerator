@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Meme{
     var caption : String
-    var image : String
+    var image : String?
+    var picture : Image?
 }
+

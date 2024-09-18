@@ -9,25 +9,26 @@ import SwiftUI
 
 struct ImagePickerView: View {
     
-    @Binding var selectedImage : String
+    @Binding var selectedMeme : String?
     
     var body: some View {
         
         ScrollView(.horizontal) {
             HStack{
-                ForEach(memes.indices){meme in
+                ForEach(memes, id: \.self){meme in
                     Button(action: {
-    
-                        selectedImage = memes[meme]
+                      
+                            selectedMeme = meme
+                        
                         
                     }, label: {
-                            Image(memes[meme])
+                            Image(meme)
                             .resizable()
                             .scaledToFill()
                             .frame(width: 80, height: 80)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                             .overlay{
-                                if  selectedImage == memes[meme]{
+                                if  selectedMeme == meme{
                                     Image(systemName: "checkmark.circle.fill")
                                         .foregroundStyle(.white)
                                         .offset(x: 30, y: -30)
@@ -44,5 +45,5 @@ struct ImagePickerView: View {
 }
 
 #Preview {
-    ImagePickerView(selectedImage: .constant("memes-bébé"))
+    ImagePickerView(selectedMeme: .constant("memes-bébé"))
 }
