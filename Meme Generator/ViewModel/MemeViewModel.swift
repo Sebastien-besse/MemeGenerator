@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class MemeViewModel{
+    
+    func addMeme(meme: Meme){
+        let meme = meme
+    }
+    
+}
+
+
