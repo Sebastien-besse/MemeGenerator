@@ -6,13 +6,46 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct PhotoPickerView: View {
+
+    @Binding var selectedPhoto: PhotosPickerItem?
+    @Binding var selectedImage: Image?
+
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            
+            PhotosPicker(
+                selection: $selectedPhoto,
+                matching: .images
+            
+            ) {
+                Label("Import Image", systemImage: "square.and.arrow.down")
+                    .bold()
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color.black)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+            }
+            .onChange(of: selectedPhoto) {  newValue in
+                Task{
+                    if let newValue{
+                        if let imageData = try? await newValue.loadTransferable(type: Data.self),
+                           let uiImage = UIImage(data: imageData) {
+                            selectedImage = Image(uiImage: uiImage)
+                        }
+                    }
+                }
+            }
+
+        }
     }
 }
 
+
+
 #Preview {
-    PhotoPickerView()
+    PhotoPickerView(selectedPhoto: .constant(nil), selectedImage: .constant(nil))
 }

@@ -50,6 +50,8 @@ struct TextEditorView: View {
                         
                 })
             }
+            
+            
         }
         .padding()
 

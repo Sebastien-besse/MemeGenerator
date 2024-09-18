@@ -17,6 +17,7 @@
 		BEE3F0DA2C98D6B500389533 /* MemeEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3F0D92C98D6B500389533 /* MemeEditorView.swift */; };
 		BEE3F0DD2C98D7E900389533 /* TextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3F0DC2C98D7E900389533 /* TextEditorView.swift */; };
 		BEE3F0DF2C9B321800389533 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3F0DE2C9B321800389533 /* ImagePickerView.swift */; };
+		BEE3F0E12C9B39B900389533 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3F0E02C9B39B900389533 /* PhotoPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		BEE3F0D92C98D6B500389533 /* MemeEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeEditorView.swift; sourceTree = "<group>"; };
 		BEE3F0DC2C98D7E900389533 /* TextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorView.swift; sourceTree = "<group>"; };
 		BEE3F0DE2C9B321800389533 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		BEE3F0E02C9B39B900389533 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			children = (
 				BEE3F0DC2C98D7E900389533 /* TextEditorView.swift */,
 				BEE3F0DE2C9B321800389533 /* ImagePickerView.swift */,
+				BEE3F0E02C9B39B900389533 /* PhotoPickerView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				BEE3F0922C90F19000389533 /* ContentView.swift in Sources */,
 				BEE3F0D42C9882DC00389533 /* MemeModel.swift in Sources */,
 				BEE3F09F2C949E9300389533 /* Memes.swift in Sources */,
+				BEE3F0E12C9B39B900389533 /* PhotoPickerView.swift in Sources */,
 				BEE3F0DF2C9B321800389533 /* ImagePickerView.swift in Sources */,
 				BEE3F0902C90F19000389533 /* Meme_GeneratorApp.swift in Sources */,
 				BEE3F0DA2C98D6B500389533 /* MemeEditorView.swift in Sources */,

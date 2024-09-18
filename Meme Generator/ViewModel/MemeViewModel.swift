@@ -9,8 +9,10 @@ import Foundation
 
 class MemeViewModel{
     
+    @Published var meme = Meme(caption: "", image: "")
+
     func addMeme(meme: Meme){
-        let meme = meme
+        self.meme = meme
     }
     
 }
