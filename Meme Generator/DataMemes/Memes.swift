@@ -7,4 +7,5 @@
 
 import Foundation
 
+
 var memes = ["memes-bébé", "memes-charlie", "memes-disloyal", "memes-shiba", "memes-black"]
