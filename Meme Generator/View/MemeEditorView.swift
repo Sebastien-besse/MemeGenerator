@@ -23,7 +23,7 @@ struct MemeEditorView: View {
 
     
     var body: some View {
-        List{
+        ScrollView{
             VStack{
                 
                 if let selectedImage{
@@ -82,6 +82,7 @@ struct MemeEditorView: View {
             .listRowSeparator(.hidden)
         }
         .listStyle(.inset)
+        .scrollDisabled(true)
         .padding()
     }
 }
